@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>HalfFriend Native</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#ffffff",
+                        "surface-variant": "#eae9d7",
+                        "outline": "#818172",
+                        "error-dim": "#70030f",
+                        "secondary-container": "#d5f8ef",
+                        "tertiary-fixed-dim": "#f1eee6",
+                        "primary-dim": "#5b556d",
+                        "surface-tint": "#67617a",
+                        "tertiary-dim": "#595853",
+                        "on-tertiary-fixed": "#4f4f49",
+                        "on-primary-fixed-variant": "#5e5870",
+                        "on-tertiary-container": "#62615b",
+                        "on-error-container": "#65000b",
+                        "secondary-fixed-dim": "#c7eae1",
+                        "primary": "#67617a",
+                        "primary-fixed": "#e7defc",
+                        "surface-container-low": "#fcf9ef",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#416059",
+                        "on-background": "#38392c",
+                        "tertiary-container": "#fdffd9",
+                        "surface-container": "#f6f4e7",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#4b6a63",
+                        "surface-container-highest": "#eae9d7",
+                        "surface-dim": "#e4e4ce",
+                        "inverse-on-surface": "#9f9d96",
+                        "surface-bright": "#fdffd9",
+                        "error-container": "#f56965",
+                        "background": "#fdffd9",
+                        "on-primary": "#ffffff",
+                        "on-surface": "#38392c",
+                        "on-tertiary-fixed-variant": "#6c6b65",
+                        "on-surface-variant": "#656557",
+                        "inverse-primary": "#e7defc",
+                        "on-secondary-fixed-variant": "#4b6a63",
+                        "surface": "#fdffd9",
+                        "on-primary-fixed": "#423c53",
+                        "secondary-fixed": "#d5f8ef",
+                        "tertiary": "#65645e",
+                        "error": "#b33938",
+                        "on-primary-container": "#544e66",
+                        "on-secondary-fixed": "#2f4e47",
+                        "secondary-dim": "#3f5e57",
+                        "outline-variant": "#bbbaa9",
+                        "surface-container-high": "#f0eedf",
+                        "on-error": "#ffffff",
+                        "primary-container": "#e7defc",
+                        "inverse-surface": "#0e0e0a",
+                        "tertiary-fixed": "#fdffd9",
+                        "primary-fixed-dim": "#d9d0ed"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Manrope', sans-serif; }
+        .glass-panel {
+            background: rgba(103, 97, 122, 0.1);
+            backdrop-filter: blur(12px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface min-h-screen pb-40 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#fdffd9] dark:bg-stone-950 flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-fixed">
+<img alt="User profile photo" data-alt="close-up portrait of a friendly young man with glasses smiling gently, warm cinematic lighting, soft background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTqhhP1XeNHpo846N-9Dvs92fEoQp2qP3G2eYFZq1Ws6ccx6IVMiGcY-CKvqfEne_RNZ7n6vwMGwqLDj2V4k3BdQnFBFq-8KXEa0Qe0GZ5hL0H3-47aZIxDE9yQqvQqBCaDz2Q3o2daBwaKe5XAWuLbflcuUyRAsGUFi40Ovs7L0WovhhJHmeNDRNz_JDxttlZ36ZSIVewYxAov_Hdlp7N_Dc4XVY0S1APFD89P-44USokJhy4m858qScXIWky-qD6uRuc37XrJg"/>
+</div>
+<h1 class="text-[#38392c] dark:text-[#f6f4e7] font-['Plus_Jakarta_Sans'] font-bold text-2xl tracking-tight">HalfFriend Native</h1>
+</div>
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#eae9d7]/50 dark:hover:bg-stone-800 transition-colors text-[#67617a] dark:text-[#e7defc] active:scale-95 duration-200 ease-out">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</header>
+<main class="mt-20 px-6 space-y-8">
+<!-- Hero Section -->
+<section class="pt-6">
+<h2 class="font-headline text-4xl font-extrabold text-on-surface tracking-tight mb-2">Good morning, friend</h2>
+<div class="flex items-center gap-2 px-4 py-2 bg-secondary-container text-on-secondary-container w-fit rounded-full">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-label text-sm font-semibold">Everything is on track</span>
+</div>
+</section>
+<!-- Bento Grid Main Body -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Quick Actions -->
+<div class="bg-surface-container rounded-lg p-6 shadow-sm">
+<h3 class="font-headline text-lg font-bold mb-4 opacity-70">Quick Actions</h3>
+<div class="flex flex-wrap gap-4">
+<button class="flex flex-col items-center justify-center w-24 h-24 bg-surface-container-highest rounded-lg hover:opacity-80 transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="timer">timer</span>
+<span class="font-label text-xs font-bold uppercase tracking-wider">Timer</span>
+</button>
+<button class="flex flex-col items-center justify-center w-24 h-24 bg-surface-container-highest rounded-lg hover:opacity-80 transition-all active:scale-95">
+<span class="material-symbols-outlined text-primary mb-2" data-icon="alarm">alarm</span>
+<span class="font-label text-xs font-bold uppercase tracking-wider">Alarm</span>
+</button>
+<button class="flex flex-col items-center justify-center w-24 h-24 bg-secondary-fixed-dim rounded-lg hover:opacity-80 transition-all active:scale-95">
+<span class="material-symbols-outlined text-secondary mb-2" data-icon="chat">chat</span>
+<span class="font-label text-xs font-bold uppercase tracking-wider">WhatsApp</span>
+</button>
+</div>
+</div>
+<!-- Memory & Search (Asymmetric Placement) -->
+<div class="bg-surface-container-low rounded-lg p-6 flex flex-col justify-between">
+<div>
+<h3 class="font-headline text-lg font-bold mb-4 opacity-70">Memory</h3>
+<div class="flex gap-2 flex-wrap mb-6">
+<span class="px-3 py-1 bg-secondary-fixed-dim text-on-secondary-fixed-variant rounded-md text-xs font-medium">"Play jazz"</span>
+<span class="px-3 py-1 bg-secondary-fixed-dim text-on-secondary-fixed-variant rounded-md text-xs font-medium">"Lock front door"</span>
+<span class="px-3 py-1 bg-secondary-fixed-dim text-on-secondary-fixed-variant rounded-md text-xs font-medium">"Buy milk"</span>
+</div>
+</div>
+<div class="relative">
+<input class="w-full bg-surface-container-lowest border-none rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-primary-fixed outline-none shadow-inner" placeholder="Search memories..." type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-3 text-on-surface-variant opacity-50" data-icon="search">search</span>
+</div>
+</div>
+<!-- Routine Helper -->
+<div class="md:col-span-2 bg-primary-container/30 rounded-xl p-8">
+<div class="flex justify-between items-end mb-6">
+<h3 class="font-headline text-2xl font-bold text-primary">Routine Helper</h3>
+<span class="font-label text-xs font-bold uppercase text-primary opacity-60">Next 3 hours</span>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-5 bg-surface-container-lowest rounded-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-secondary-container rounded-full text-secondary">
+<span class="material-symbols-outlined" data-icon="medication">medication</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Daily Vitamin</p>
+<p class="text-xs text-on-surface-variant">Scheduled for 10:30 AM</p>
+</div>
+</div>
+<button class="text-primary font-bold text-sm">DONE</button>
+</div>
+<div class="flex items-center justify-between p-5 bg-surface-container-low rounded-lg">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 flex items-center justify-center bg-primary-fixed rounded-full text-primary">
+<span class="material-symbols-outlined" data-icon="calendar_today">calendar_today</span>
+</div>
+<div>
+<p class="font-bold text-on-surface">Weekly Review Call</p>
+<p class="text-xs text-on-surface-variant">Scheduled for 11:15 AM</p>
+</div>
+</div>
+<button class="text-primary font-bold text-sm">REMAP</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual Voice Bar -->
+<div class="fixed bottom-28 left-0 w-full px-6 z-40">
+<div class="max-w-xl mx-auto flex items-center gap-3 p-2 bg-surface-container-lowest border border-outline-variant/20 rounded-xl shadow-[0_8px_32px_rgba(103,97,122,0.12)] backdrop-blur-xl">
+<input class="flex-1 bg-transparent border-none focus:ring-0 px-4 font-body text-on-surface placeholder:text-on-surface-variant/50" placeholder="Ask HalfFriend..." type="text"/>
+<button class="bg-primary-container text-on-primary-container px-6 py-3 rounded-full flex items-center gap-2 font-bold transition-all active:scale-95 shadow-sm">
+<span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span>Speak</span>
+</button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-[#fdffd9]/80 dark:bg-stone-950/80 backdrop-blur-xl rounded-t-[3rem] border-t border-[#bbbaa9]/20 shadow-[0_-4px_32px_rgba(56,57,44,0.06)]">
+<!-- Home (Active) -->
+<a class="flex flex-col items-center justify-center bg-[#e7defc] dark:bg-[#67617a] text-[#544e66] dark:text-[#e7defc] rounded-full px-5 py-2 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide uppercase">Home</span>
+</a>
+<!-- Routine -->
+<a class="flex flex-col items-center justify-center text-[#656557] dark:text-[#bbbaa9] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="event_repeat">event_repeat</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide uppercase">Routine</span>
+</a>
+<!-- Skills -->
+<a class="flex flex-col items-center justify-center text-[#656557] dark:text-[#bbbaa9] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="extension">extension</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide uppercase">Skills</span>
+</a>
+<!-- Memory -->
+<a class="flex flex-col items-center justify-center text-[#656557] dark:text-[#bbbaa9] px-5 py-2 hover:opacity-80 transition-opacity" href="#">
+<span class="material-symbols-outlined" data-icon="psychology">psychology</span>
+<span class="font-['Manrope'] text-[11px] font-medium tracking-wide uppercase">Memory</span>
+</a>
+</nav>
+</body></html>
